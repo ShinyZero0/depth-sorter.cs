@@ -5,11 +5,12 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        var inputStream = new StreamReader(Console.OpenStandardInput());
         var output = new SortedDictionary<int, List<string>>();
         string s;
         while(( s = Console.ReadLine()) != null)
         {
-            string file = Console.ReadLine();
+            string file = s;
             int depth;
             depth = file.Count(c => c == '/');
             if (!file.EndsWith('/'))
